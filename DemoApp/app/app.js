@@ -1,8 +1,8 @@
 var application = require("application");
 application.mainModule = "views/main/main";
-application.start();
 
 // launch event reaised when the application launches
+// if this command is not placed before the application.start(), then it won't execute
 application.on(application.launchEvent, function (args) {
 	console.log("App launching...");
 	
@@ -12,3 +12,6 @@ application.on(application.launchEvent, function (args) {
 		console.log("Launched iOS app with options: " + args.ios);
 	}
 });
+
+application.start();
+

@@ -1,6 +1,5 @@
 var application = require("application");
 application.mainModule = "views/main/main";
-application.start();
 
 // launch event reaised when the application launches
 application.on(application.launchEvent, function (args) {
@@ -12,3 +11,6 @@ application.on(application.launchEvent, function (args) {
 		console.log("Launched iOS app with options: " + args.ios);
 	}
 });
+
+application.start();
+
