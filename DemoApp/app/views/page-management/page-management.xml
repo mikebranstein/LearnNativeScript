@@ -40,7 +40,7 @@
 
 			<Label text="Setting a Home Page" cssClass="title" textWrap="true" />
 			<Label text="To start your app, the NativeScript runtime needs a home page set." cssClass="text" textWrap="true" />
-			<Label text="Establish your home page by setting the mainModule value of the Application module before calling start(). The code below tells the runtime to locate a folder named 'main' in the app root. By convention, the runtime expects the 'main' folder to have an XML file named main.xml." cssClass="text" textWrap="true" />
+			<Label text="Establish your home page by setting the mainModule value of the Application module before calling start(). The code below tells the runtime to locate a folder named 'main' in the app root. By convention, the runtime expects the 'main' folder to have one of two things: 1. an XML file named 'main.xml' with valid &lt;Page&gt; markup or 2. a javascript file named 'main.js' with a function named 'createPage' and returning a Page object." cssClass="text" textWrap="true" />
 
 			<GridLayout columns="10,*" rows="auto">
 				<StackLayout cssClass="codeSidebar">
