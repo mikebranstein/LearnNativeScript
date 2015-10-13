@@ -38,6 +38,19 @@
 				</StackLayout>
 			</GridLayout>
 
+			<Label text="Setting a Home Page" cssClass="title" textWrap="true" />
+			<Label text="To start your app, the NativeScript runtime needs a home page set." cssClass="text" textWrap="true" />
+			<Label text="Establish your home page by setting the mainModule value of the Application module before calling start(). The code below tells the runtime to locate a folder named 'main' in the app root. By convention, the runtime expects the 'main' folder to have an XML file named main.xml." cssClass="text" textWrap="true" />
+
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="var application = require('application');" textWrap="true" />
+					<Label text="application.mainModule = 'main';" />
+					<Label text="application.start();" />
+				</StackLayout>
+			</GridLayout>
 		</StackLayout>
 	</ScrollView>
 </Page>
