@@ -1,7 +1,18 @@
-﻿.title {
+﻿Page {
+    margin: 10;
+}
+
+.text {
+    padding-bottom: 10;
+}
+
+.title, .subTitle {
     font-size: 30;
     horizontal-align: center;
-    margin:20;
+    padding-bottom: 10;
+}
+.subTitle {
+    font-size: 24;
 }
 
 button {
@@ -13,4 +24,16 @@ button {
     font-size: 20;
     color: #284848;
     horizontal-align: center;
+}
+
+.codeSidebar {
+    background-color: #328CCB;
+}
+
+.code {
+    padding: 10;
+    border-color: #AAAAAA;
+    border-width: 1;
+    font-family: monospace;
+    font-size: 14;
 }

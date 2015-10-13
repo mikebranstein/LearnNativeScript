@@ -1,3 +1,43 @@
 <Page loaded="loaded">
-	
+	<ScrollView>
+		<StackLayout>
+			<Label text="Creating Pages" cssClass="title" textWrap="true" />
+			<Label text="Pages can be defined in two ways: separate from the business logic (via an XML file) and within your business logic (using the ui/page module)." textWrap="true" cssClass="text" />
+
+			<Label text="XML-based View" cssClass="subTitle" textWrap="true" />
+			<Label text="To define a page outside of your app's business logic, create an XML file with the same file name prefix as your javascript or typescript file." textWrap="true" cssClass="text" />
+			<Label text="Inside your XML file, wrap your view with a 'Page' tag." textWrap="true" cssClass="text" />
+
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="&lt;Page&gt;" />
+					<Label text="  &lt;!-- UI markup goes here --&gt;" />
+					<Label text="&lt;/Page&gt;" />
+				</StackLayout>
+			</GridLayout>
+
+			<Label text="Code-based View" cssClass="subTitle" textWrap="true" />
+			<Label text="To define a page in your app's business logic, create a function that returns an instance of the page module's Page class. Like XML-based views, you can navigate to a dynamic view by passing the function to the navigate method." cssClass="text" textWrap="true" />
+
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="var pageModule = require('ui/page');" textWrap="true" />
+					<Label text="var labelModule = require('ui/label');
+								" textWrap="true" />
+					<Label text="exports.createPage = function () {" textWrap="true" />
+					<Label text="  var label = new labelModule.Label();" textWrap="true" />
+					<Label text="  label.text = 'Hello';" textWrap="true" />
+					<Label text="  var page = new pageModule.Page();" textWrap="true" />
+					<Label text="  page.content = label;" textWrap="true" />
+					<Label text="  return page;" textWrap="true" />
+					<Label text="};" />
+				</StackLayout>
+			</GridLayout>
+
+		</StackLayout>
+	</ScrollView>
 </Page>
