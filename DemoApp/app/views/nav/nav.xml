@@ -1,0 +1,19 @@
+<Page loaded="loaded">
+	<ScrollView>
+		<StackLayout>
+			<Label text="Frames" cssClass="title" textWrap="true" />
+			<Label text="Navigation between pages of your app can be done by interacting with the the Frame module." textWrap="true" cssClass="text" />
+			<Label text="All apps have a topmost frame, which has a reference to the navigate() function. To access the topmost frame, call the topmost() function:" textWrap="true" cssClass="text" />
+
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="var frameModule = require('ui/frame');" textWrap="true" />
+					<Label text="var topmost = frameModule.topmost();" />
+				</StackLayout>
+			</GridLayout>
+
+		</StackLayout>
+	</ScrollView>
+</Page>
