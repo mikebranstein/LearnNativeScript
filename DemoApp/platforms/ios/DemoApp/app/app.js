@@ -2,6 +2,7 @@ var application = require("application");
 application.mainModule = "views/main/main";
 
 // launch event reaised when the application launches
+// if this command is not placed before the application.start(), then it won't execute
 application.on(application.launchEvent, function (args) {
 	console.log("App launching...");
 	
