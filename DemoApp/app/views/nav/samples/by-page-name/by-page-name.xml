@@ -1,0 +1,6 @@
+<Page loaded="loaded">
+	<StackLayout>
+		<Label text="By Page Name" cssClass="title" textWrap="true" />
+		<Label text="This page was navigated to by specifying a page name." cssClass="text" textWrap="true" />
+	</StackLayout>
+</Page>

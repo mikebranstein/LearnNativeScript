@@ -15,8 +15,7 @@
     font-size: 24;
 }
 
-button {
-    font-size: 42;
+Button {
     horizontal-align: center;
 }
 

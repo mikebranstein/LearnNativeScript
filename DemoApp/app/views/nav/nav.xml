@@ -10,9 +10,23 @@
 				</StackLayout>
 				<StackLayout col="1" cssClass="code">
 					<Label text="var frameModule = require('ui/frame');" textWrap="true" />
-					<Label text="var topmost = frameModule.topmost();" />
+					<Label text="var topmost = frameModule.topmost();" textWrap="true" />
 				</StackLayout>
 			</GridLayout>
+			
+			<Label text="Navigate by Page Name" cssClass="subTitle" textWrap="true" />
+			<Label text="The easiest way to naivate to a page is to navigate by page name." textWrap="true" cssClass="text" />
+
+			<Button text="Navigate By Page Name" tap="navigateByPageName" />
+
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="topmost.navigate('samples/by-page-name');" textWrap="true" />
+				</StackLayout>
+			</GridLayout>
+			
 
 		</StackLayout>
 	</ScrollView>
