@@ -1,0 +1,8 @@
+<Page loaded="loaded">
+	<StackLayout>
+		<Label text="With More Control" cssClass="title" textWrap="true" />
+		<Label text="This page was navigated to using the NavigationEntry class." cssClass="text" textWrap="true" />
+		<Label text="The following context was passed into the page during navigation:" cssClass="text" textWrap="true" />
+		<Label id="contextLabel" cssClass="text" textWrap="true" />
+	</StackLayout>
+</Page>

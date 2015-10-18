@@ -55,6 +55,28 @@
 				</StackLayout>
 			</GridLayout>
 			<Label text=" " textWrap="true" />
+
+			<!-- more control -->
+			<Label text="More Control" cssClass="subTitle" textWrap="true" />
+			<Label text="You have have a greater degree of control over the navigation process by using an instance of the NavigationEntry class." textWrap="true" cssClass="text" />
+			<Label text="One reason to use this approach is to pass app data (or context) between pages." textWrap="true" />
+
+			<Button text="Navigate with More Control" tap="navigateWithMoreControl" />
+
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="exports.navigateWithMoreControl = function (args) {" textWrap="true" />
+					<Label text="  var navigationEntry = {" textWrap="true" />
+					<Label text="    moduleName: 'views/nav/samples/more-control'," textWrap="true" />
+					<Label text="    context: { data: 'Hello NativeScripters!' }" textWrap="true" />
+					<Label text="  };" textWrap="true" />
+					<Label text="  topmost.navigate(navigationEntry);" textWrap="true" />
+					<Label text="}" textWrap="true" />
+				</StackLayout>
+			</GridLayout>
+			<Label text=" " textWrap="true" />
 			
 		</StackLayout>
 	</ScrollView>

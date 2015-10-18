@@ -28,3 +28,11 @@ var pageFactory = function () {
 exports.navigateByFunction = function (args) {
 	topmost.navigate(pageFactory);		
 };
+
+exports.navigateWithMoreControl = function (args) {
+	var navigationEntry = {
+		moduleName: viewRoot + "more-control/more-control",
+		context: { data: "Hello NativeScripters!" }
+	};
+	topmost.navigate(navigationEntry);
+};
