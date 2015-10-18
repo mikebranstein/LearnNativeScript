@@ -14,10 +14,11 @@
 				</StackLayout>
 			</GridLayout>
 			
+			<!-- by Page Name -->
 			<Label text="Navigate by Page Name" cssClass="subTitle" textWrap="true" />
-			<Label text="The easiest way to naivate to a page is to navigate by page name." textWrap="true" cssClass="text" />
+			<Label text="The easiest way to navigate to a page is to navigate by page name." textWrap="true" cssClass="text" />
 
-			<Button text="Navigate By Page Name" tap="navigateByPageName" />
+			<Button text="Navigate by Page Name" tap="navigateByPageName" />
 
 			<GridLayout columns="10,*" rows="auto">
 				<StackLayout cssClass="codeSidebar">
@@ -27,7 +28,30 @@
 				</StackLayout>
 			</GridLayout>
 			
+			<!-- by function -->
+			<Label text="Navigate by Function" cssClass="subTitle" textWrap="true" />
+			<Label text="A dynamic method of navigating is to use a function that returns a page object. This method works well when you need to construct the resulting page dynamically based upon data." textWrap="true" cssClass="text" />
 
+			<Button text="Navigate by Function" tap="navigateByFunction" />
+
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="var pageFactory = function () {" textWrap="true" />
+					<Label text="  label.text = 'This page was navi...';" textWrap="true" />
+					<Label text="  label.cssClass = 'text';" textWrap="true" />
+					<Label text="  label.textWrap = true;" textWrap="true" />
+					<Label text="  var page = new pageModule.Page();" textWrap="true" />
+					<Label text="  page.content = label;" textWrap="true" />
+					<Label text="  return page;" textWrap="true" />
+					<Label text="}" textWrap="true" />
+					<Label text=" " textWrap="true" />
+					<Label text="exports.navigateByFunction = function (args) {" textWrap="true" />
+					<Label text="  topmost.navigate(pageFactory);" textWrap="true" />
+					<Label text="}" textWrap="true" />
+				</StackLayout>
+			</GridLayout>
 		</StackLayout>
 	</ScrollView>
 </Page>
