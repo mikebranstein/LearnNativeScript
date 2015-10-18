@@ -13,6 +13,7 @@
 					<Label text="var topmost = frameModule.topmost();" textWrap="true" />
 				</StackLayout>
 			</GridLayout>
+			<Label text=" " textWrap="true" />
 			
 			<!-- by Page Name -->
 			<Label text="Navigate by Page Name" cssClass="subTitle" textWrap="true" />
@@ -27,6 +28,7 @@
 					<Label text="topmost.navigate('samples/by-page-name');" textWrap="true" />
 				</StackLayout>
 			</GridLayout>
+			<Label text=" " textWrap="true" />
 			
 			<!-- by function -->
 			<Label text="Navigate by Function" cssClass="subTitle" textWrap="true" />
@@ -52,6 +54,8 @@
 					<Label text="}" textWrap="true" />
 				</StackLayout>
 			</GridLayout>
+			<Label text=" " textWrap="true" />
+			
 		</StackLayout>
 	</ScrollView>
 </Page>
