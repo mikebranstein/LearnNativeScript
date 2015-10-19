@@ -78,6 +78,53 @@
 			</GridLayout>
 			<Label text=" " textWrap="true" />
 			
+			<!-- other options -->
+			<Label text="Other Options" cssClass="subTitle" textWrap="true" />
+			<Label text="You can also specify other options when using a NavigationEntry object for navigation." textWrap="true" cssClass="text" />
+
+			<!-- no animation -->
+			<Button text="No Animation" tap="navigateWithNoAnimation" />
+
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="exports.navigateWithMoreControl = function (args) {" textWrap="true" />
+					<Label text="  var navigationEntry = {" textWrap="true" />
+					<Label text="    moduleName: 'views/nav/samples/more-control/more-control'," textWrap="true" />
+					<Label text="    animated: false," textWrap="true" />
+					<Label text="    context: { data: 'Hello NativeScripters!' }" textWrap="true" />
+					<Label text="  };" textWrap="true" />
+					<Label text="  topmost.navigate(navigationEntry);" textWrap="true" />
+					<Label text="}" textWrap="true" />
+				</StackLayout>
+			</GridLayout>
+			<Label text=" " textWrap="true" />
+			
+			<!-- no history -->
+			<Label text="You can also tell the {N} runtime to not record your navigation in the history with the backstackVisible value." textWrap="true" cssClass="text" />
+			<Label text="Alternatively, set the clearHistory value to prevent users from navigation back from the next page." textWrap="true" cssClass="text" />
+			<Label text="WARNING: The following link set both these values, and you will be required to restart the app!" textWrap="true" cssClass="text" />
+			<Button text="No History" tap="navigateWithNoHistory" />
+
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="exports.navigateWithMoreControl = function (args) {" textWrap="true" />
+					<Label text="  var navigationEntry = {" textWrap="true" />
+					<Label text="    moduleName: 'views/nav/samples/more-control/more-control'," textWrap="true" />
+					<Label text="    backstackVisible: false," textWrap="true" />
+					<Label text="    clearHistory: true," textWrap="true" />
+					<Label text="    context: { data: 'Hello NativeScripters!' }" textWrap="true" />
+					<Label text="  };" textWrap="true" />
+					<Label text="  topmost.navigate(navigationEntry);" textWrap="true" />
+					<Label text="}" textWrap="true" />
+				</StackLayout>
+			</GridLayout>
+			<Label text=" " textWrap="true" />
+
+			
 		</StackLayout>
 	</ScrollView>
 </Page>

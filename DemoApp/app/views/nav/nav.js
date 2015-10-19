@@ -36,3 +36,22 @@ exports.navigateWithMoreControl = function (args) {
 	};
 	topmost.navigate(navigationEntry);
 };
+
+exports.navigateWithNoAnimation = function (args) {
+	var navigationEntry = {
+		moduleName: viewRoot + "more-control/more-control",
+		animated: false,
+		context: { data: "Hello NativeScripters!" }
+	};
+	topmost.navigate(navigationEntry);
+};
+
+exports.navigateWithNoHistory = function (args) {
+	var navigationEntry = {
+		moduleName: viewRoot + "more-control/more-control",
+		backstackVisible: false,
+		clearHistory: true,
+		context: { data: "Hello NativeScripters!" }
+	};
+	topmost.navigate(navigationEntry);
+};
