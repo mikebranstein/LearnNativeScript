@@ -69,7 +69,7 @@
 				<StackLayout col="1" cssClass="code">
 					<Label text="exports.navigateWithMoreControl = function (args) {" textWrap="true" />
 					<Label text="  var navigationEntry = {" textWrap="true" />
-					<Label text="    moduleName: 'views/nav/samples/more-control'," textWrap="true" />
+					<Label text="    moduleName: 'views/nav/samples/more-control/more-control'," textWrap="true" />
 					<Label text="    context: { data: 'Hello NativeScripters!' }" textWrap="true" />
 					<Label text="  };" textWrap="true" />
 					<Label text="  topmost.navigate(navigationEntry);" textWrap="true" />
