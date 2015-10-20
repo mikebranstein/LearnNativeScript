@@ -2,5 +2,21 @@
 	<StackLayout>
 		<Label text="By Page Name" cssClass="title" textWrap="true" />
 		<Label text="This page was navigated to by specifying a page name." cssClass="text" textWrap="true" />
+		<Label text=" " cssClass="text" textWrap="true" />
+
+		<Label text="Navigate Back" cssClass="subTitle" textWrap="true" />
+		<Label text="You can navigate back using the back button at top or via the goBack() method." cssClass="text" textWrap="true" />
+		<Button text="Back" tap="navigateBack" />
+
+		<GridLayout columns="10,*" rows="auto">
+			<StackLayout cssClass="codeSidebar">
+			</StackLayout>
+			<StackLayout col="1" cssClass="code">
+				<Label text="exports.navigateBack = function (args) {" textWrap="true" />
+				<Label text="  topmost.goBack();" textWrap="true" />
+				<Label text="}" textWrap="true" />
+			</StackLayout>
+		</GridLayout>
+
 	</StackLayout>
 </Page>
