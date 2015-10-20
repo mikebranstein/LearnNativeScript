@@ -3,8 +3,10 @@ var labelModule = require("ui/label");
 var pageModule = require("ui/page");
 var viewRoot = "views/nav/samples/";
 var topmost;
+var page;
 
 exports.loaded = function (args) {
+	page = args.object;	
 	topmost = frameModule.topmost();
 
 	console.log("Loaded nav page.");
@@ -20,9 +22,9 @@ var pageFactory = function () {
 	label.cssClass = "text";
 	label.textWrap = true;
 
-	var page = new pageModule.Page();
-	page.content = label;
-	return page;
+	var newPage = new pageModule.Page();
+	newPage.content = label;
+	return newPage;
 };
 
 exports.navigateByFunction = function (args) {
@@ -55,3 +57,13 @@ exports.navigateWithNoHistory = function (args) {
 	};
 	topmost.navigate(navigationEntry);
 };
+
+exports.openModal = function (args) {
+	var modalPage = viewRoot + "modal/modal";
+	var context = "data...";
+	var fullscreen = false;
+	
+	page.showModal(modalPage, context, function closeCallback(callbackData) {
+		console.log("Modal returned: " + callbackData);
+	}, fullscreen);
+}

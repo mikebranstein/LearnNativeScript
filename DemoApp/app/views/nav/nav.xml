@@ -44,9 +44,9 @@
 					<Label text="  label.text = 'This page was navi...';" textWrap="true" />
 					<Label text="  label.cssClass = 'text';" textWrap="true" />
 					<Label text="  label.textWrap = true;" textWrap="true" />
-					<Label text="  var page = new pageModule.Page();" textWrap="true" />
-					<Label text="  page.content = label;" textWrap="true" />
-					<Label text="  return page;" textWrap="true" />
+					<Label text="  var newPage = new pageModule.Page();" textWrap="true" />
+					<Label text="  newPage.content = label;" textWrap="true" />
+					<Label text="  return newPage;" textWrap="true" />
 					<Label text="}" textWrap="true" />
 					<Label text=" " textWrap="true" />
 					<Label text="exports.navigateByFunction = function (args) {" textWrap="true" />
@@ -124,7 +124,28 @@
 			</GridLayout>
 			<Label text=" " textWrap="true" />
 
+			<!-- modals -->
+			<Label text="Modals" cssClass="subTitle" textWrap="true" />
+			<Label text="Pages can also be opened as modal dialogs by using the showModal() function of the page class." textWrap="true" cssClass="text" />
+			<Label text="When calling showModal(), you can pass in context and a callback function that is called when the modal closes. An optional fullscreen boolean can also be passed to the function." textWrap="true" cssClass="text" />
 			
+			<Button text="Open Modal" tap="openModal" />
+
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="exports.openModal = function (args) {" textWrap="true" />
+					<Label text="  var modalPage = viewRoot + 'modal/modal';" textWrap="true" />
+					<Label text="  var context = 'data...';" textWrap="true" />
+					<Label text="  var fullscreen = true;" textWrap="true" />
+					<Label text=" " textWrap="true" />
+					<Label text="  page.showModal(modalPage, context, function closeCallback(callbackData) {" textWrap="true" />
+					<Label text="    console.log('Modal returned: ' + callbackData);" textWrap="true" />
+					<Label text="  }, fullscreen);" textWrap="true" />
+					<Label text="};" textWrap="true" />
+				</StackLayout>
+			</GridLayout>
 		</StackLayout>
 	</ScrollView>
 </Page>

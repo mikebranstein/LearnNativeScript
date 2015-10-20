@@ -1,0 +1,43 @@
+<Page loaded="loaded" shownModally="onShownModally">
+	<ScrollView>
+		<StackLayout>
+			<Label text="Modals" cssClass="title" textWrap="true" />
+			<Label text="When opening a modal, you need to subscribe to the shownModally event. Within the event handler, you have access to the passed in context and closeCallback function." textWrap="true" cssClass="text" />
+		
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="var context;" textWrap="true" />
+					<Label text="var closeCallback;" textWrap="true" />
+					<Label text=" " textWrap="true" />
+					<Label text="exports.onShownModally = function (args)" textWrap="true" />
+					<Label text="  context = args.context;" textWrap="true" />
+					<Label text="  closeCallback = args.closeCallback;" textWrap="true" />
+					<Label text="}" textWrap="true" />
+				</StackLayout>
+			</GridLayout>
+			<Label text=" " textWrap="true" />
+	
+			<Label text="Closing a Modal" cssClass="subTitle" textWrap="true" />
+			<Label text="To close a modal dialog, you call the close callback function originally passed into the showModal function." textWrap="true" />
+			<Label text="Context can be passed back as arguments to this function." textWrap="true" />
+			<Button text="Close Modal" tap="closeModal" />
+	
+		
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="var context;" textWrap="true" />
+					<Label text="var closeCallback;" textWrap="true" />
+					<Label text=" " textWrap="true" />
+					<Label text="exports.onShownModally = function (args)" textWrap="true" />
+					<Label text="  context = args.context;" textWrap="true" />
+					<Label text="  closeCallback = args.closeCallback;" textWrap="true" />
+					<Label text="}" textWrap="true" />
+				</StackLayout>
+			</GridLayout>
+		</StackLayout>
+	</ScrollView>
+</Page>
