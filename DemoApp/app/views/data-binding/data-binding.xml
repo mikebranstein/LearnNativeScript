@@ -1,0 +1,7 @@
+<Page loaded="onLoaded">
+	<ScrollView>
+		<StackLayout>
+			<Label text="Data Binding" class="title" />
+		</StackLayout>
+	</ScrollView>
+</Page>

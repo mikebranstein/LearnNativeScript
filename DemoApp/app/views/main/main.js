@@ -5,7 +5,8 @@ var frameModule = require("ui/frame");
 var viewModel = {
     listItems: [ 
         { title: "Page Management", view: "page-management" }, 
-        { title: "Navigation", view: "nav" } 
+        { title: "Navigation", view: "nav" }, 
+        { title: "Data Binding", view: "data-binding" } 
     ]  
 };
 var page;
