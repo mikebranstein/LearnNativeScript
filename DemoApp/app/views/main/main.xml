@@ -1,7 +1,13 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="loaded">
-	<ListView items="{{ listItems }}">
-		<ListView.itemTemplate>
-			<Label text="{{ title }}" tap="tap" />
-		</ListView.itemTemplate>
-	</ListView>
+	<StackLayout>
+		<Image src="res://icon" stretch="none" horizontalAlignment="center" />
+		<Label text="Welcome to NativeScript!" class="title" textWrap="true" />
+		<Label text="To learn about NativeScript, check out one of the topics below." class="text" textWrap="true" />
+
+		<ListView items="{{ listItems }}">
+			<ListView.itemTemplate>
+				<Label text="{{ title }}" tap="tap" />
+			</ListView.itemTemplate>
+		</ListView>
+	</StackLayout>
 </Page>

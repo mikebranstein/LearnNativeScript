@@ -6,3 +6,7 @@ Label {
     horizontal-align: left;
     vertical-align: center;
 }
+Image {
+    margin-top: 25;
+    margin-bottom: 25;
+}
