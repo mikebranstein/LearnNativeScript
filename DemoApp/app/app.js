@@ -1,5 +1,5 @@
 var application = require("application");
-application.mainModule = "views/main/main";
+application.mainModule = "views/splash/splash";
 
 // launch event reaised when the application launches
 // if this command is not placed before the application.start(), then it won't execute
