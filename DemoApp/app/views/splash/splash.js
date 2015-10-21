@@ -7,7 +7,8 @@ exports.onLoaded = function (args) {
 	setTimeout(function() {
 		var navigationEntry = {
 			moduleName: "views/main/main",
-			clearHistory: true
+			clearHistory: true,
+			animated: false
 		};
 		topmost.navigate(navigationEntry);
 	}, 2500);
