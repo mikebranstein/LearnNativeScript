@@ -23,11 +23,12 @@ exports.loaded = function (args) {
     console.log(applicationSettingsModule.hasKey("Name")); // prints false
 };
 
-exports.tap = function (args) {
-    var item = 	args.view.bindingContext;
-	var index = viewModel.listItems.indexOf(item);
+exports.onItemTap = function (args) {
+    var item = args.view.bindingContext;
+    var index = args.index;
+      
     console.log("Index of tapped ListItem: " + index);
     console.log("Value of tapped ListItem: " + item.view);
-    
+
     frameModule.topmost().navigate("views/" + item.view + "/" + item.view);
 };

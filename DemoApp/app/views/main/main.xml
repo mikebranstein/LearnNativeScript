@@ -4,9 +4,9 @@
 		<Label text="Welcome to NativeScript!" class="title" textWrap="true" />
 		<Label text="To learn about NativeScript, check out one of the topics below." class="text" textWrap="true" />
 
-		<ListView items="{{ listItems }}">
+		<ListView items="{{ listItems }}" itemTap="onItemTap">
 			<ListView.itemTemplate>
-				<Label text="{{ title }}" tap="tap" />
+				<Label text="{{ title }}" />
 			</ListView.itemTemplate>
 		</ListView>
 	</StackLayout>
