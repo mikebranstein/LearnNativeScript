@@ -46,7 +46,7 @@ All code examples below assume nvm is installed, using Nodejs verison 0.12.7.
 
 ## Cloning the Repository
 
-	git clone https://github.com/mikebranstein/NativeScriptDemoApp
+	git clone https://github.com/mikebranstein/LearnNativeScript
 
 ## Restore Packages and Provision NativeScript Assets
 
