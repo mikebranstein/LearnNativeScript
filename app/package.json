@@ -1,10 +1,10 @@
 {
-	"name": "nativescript-demo-app",
+	"name": "learn-nativescript",
 	"main": "app.js",
 	"jsoptions": "--expose_gc",
 	"version": "1.4.0",
 	"author": "Mike Branstein <mike@brosteins.com> (https://brosteins.com)",
-	"description": "Nativescript demo app showing how to use the platform",
+	"description": "Nativescript app showing how to use the platform",
 	"license": "MIT",
 	"keywords": [
 		"mobile",
@@ -15,10 +15,10 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/mikebranstein/NativeScriptDemoApp.git"
+		"url": "https://github.com/mikebranstein/LearNNativeScript.git"
 	},
 	"bugs": {
-		"url": "https://github.com/mikebranstein/NativeScriptDemoApp/issues"
+		"url": "https://github.com/mikebranstein/LearnNativeScript/issues"
 	},
-	"homepage": "https://github.com/mikebranstein/NativeScriptDemoApp"
+	"homepage": "https://github.com/mikebranstein/LearnNativeScript"
 }

@@ -1,6 +1,6 @@
 {
 	"nativescript": {
-		"id": "com.brosteins.NativeScriptDemoApp",
+		"id": "com.brosteins.LearnNativeScript",
 		"tns-ios": {
 			"version": "1.4.0"
 		}
