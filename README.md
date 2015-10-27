@@ -56,8 +56,7 @@ platforms, prepare, then build.
 
 	nvm use 0.12.7
 
-	cd NativeScriptDemoApp
-	cd DemoApp
+	cd LearnNativeScript
 
 	npm install
 	tns install
