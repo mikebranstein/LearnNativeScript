@@ -7,8 +7,8 @@
 /lib/
 /.metadata/
 /.tscache
-/node_modules/
-/platforms/
+/node_modules
+/platforms
 
 */.DS_Store
 *.DS_Store
