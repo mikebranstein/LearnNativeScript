@@ -13,3 +13,9 @@
 */.DS_Store
 *.DS_Store
 .DS_Store
+
+platforms/ios/*
+!platforms/ios/LearnNativeScript
+platforms/ios/LearnNativeScript/*
+!platforms/ios/LearnNativeScript/Images.xcassets
+!platforms/ios/LearnNativeScript/LearnNativeScript-Info.plist
