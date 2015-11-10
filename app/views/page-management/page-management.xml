@@ -17,6 +17,7 @@
 					<Label text="&lt;/Page&gt;" />
 				</StackLayout>
 			</GridLayout>
+			<Label text=" " textWrap="true" />
 
 			<Label text="Code-based View" cssClass="subTitle" textWrap="true" />
 			<Label text="To define a page in your app's business logic, create a function that returns an instance of the page module's Page class. Like XML-based views, you can navigate to a dynamic view by passing the function to the navigate method." cssClass="text" textWrap="true" />
@@ -37,6 +38,7 @@
 					<Label text="};" />
 				</StackLayout>
 			</GridLayout>
+			<Label text=" " textWrap="true" />
 
 			<Label text="Setting a Home Page" cssClass="title" textWrap="true" />
 			<Label text="To start your app, the NativeScript runtime needs a home page set." cssClass="text" textWrap="true" />
