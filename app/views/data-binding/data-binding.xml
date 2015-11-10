@@ -2,6 +2,15 @@
 	<ScrollView>
 		<StackLayout>
 			<Label text="Data Binding" class="title" />
+			<Label text="Data binding is a mechanism that allows a user interface element to connect with a business logic object." textWrap="true" cssClass="text" />
+			<Label text="Changes made to the element are automatically reflected in the business object, and changes made to the business object are automatically reflected in the element." textWrap="true" cssClass="text" />
+			<Label text="" textWrap="true" cssClass="text" />
+
+			<Label text="Data Flow" class="subTitle" />
+			<Label text="When data bound, the business logic objects are typicaly referred to as the source, and UI elements are considered the target or destination." textWrap="true" cssClass="text" />
+			<Label text="The flow of data between the source and target can be considered one-way or two-way. In one-way data binding, data flows in a single direction (from the source to target, where updates to the source are reflected in the target, but target updates do not flow to the source). In two-way, data flows in both directions, and both the source and target are automatically kept in sync." textWrap="true" cssClass="text" />
+			<Label text="NativeScript supports both one-way and two-way data binding." textWrap="true" cssClass="text" />
+
 		</StackLayout>
 	</ScrollView>
 </Page>
