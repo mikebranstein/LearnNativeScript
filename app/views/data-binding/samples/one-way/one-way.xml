@@ -1,0 +1,101 @@
+<Page loaded="onLoaded" navigatingFrom="onNavigatingFrom">
+	<ScrollView>
+		<StackLayout>
+			<Label text="One-Way Data Binding" class="title" />
+			<Label text="With one-way data-binding, data flows from source to target. Changes in the source business object are synchronized to the target. Changes in the target are not synchronized to the source." textWrap="true" />
+			<Label text="" textWrap="true" cssClass="text" />
+
+			<Label text="Example" textWrap="true" cssClass="subTitle" />
+			<Label text="Below, the text property of a TextField is data bound to an object that is incremented by 1 every second." textWrap="true" cssClass="text" />
+			
+			<!-- one-way display on page -->
+			<GridLayout columns="auto,*" rows="auto">
+				<Label text="TextField value is: " row="0" col="0" />
+				<TextField id="text-field" row="0" col="1" />
+			</GridLayout>
+			<Label text=" " textWrap="true" />
+
+			<Label text="Sample Code" textWrap="true" cssClass="subTitle" />
+
+			<!-- code snippet - view -->
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="&lt;TextField id=&quot;text-field&quot; /&gt;" />
+				</StackLayout>
+			</GridLayout>
+			<Label text=" " textWrap="true" />
+			
+			<Label text="In code, use the Observable module to create a busienss object capable of storing your data and raising notificaitons when its internal data changes. We'll cover observables in more detail soon." textWrap="true" cssClass="text" />
+			
+			<!-- code snippet - js observables -->
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="var observableModule = require(&quot;data/observable&quot;);" />
+					<Label text="var source = new observableModule.Observable({" />
+					<Label text="  textSource: 0" />
+					<Label text="});" />
+				</StackLayout>
+			</GridLayout>
+			<Label text=" " textWrap="true" />
+
+			<Label text="Get a reference to the TextField, by using a lookup function on the page object." textWrap="true" cssClass="text" />
+			
+			<!-- code snippet - js get text field -->
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="exports.onLoaded = function (args) {" />
+					<Label text="  var page = args.object;" />
+					<Label text="  var textField = page.getViewById(&quot;text-field&quot;);" />
+					<Label text="}" />
+				</StackLayout>
+			</GridLayout>
+			<Label text=" " textWrap="true" />
+
+			<Label text="Use a binding options object to set the source and target properties and bind the source object and target TextField together." textWrap="true" cssClass="text" />
+			
+			<!-- code snippet - js bind -->
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="var bindingOptions = {" />
+					<Label text="  sourceProperty: &quot;textSource&quot;," />
+					<Label text="  targetProperty: &quot;text&quot;," />
+					<Label text="  twoWay: false" />
+					<Label text="}" />
+					<Label text="textField.bind(bindingOptions, source);" />
+				</StackLayout>
+			</GridLayout>
+			<Label text=" " textWrap="true" />
+
+			<Label text="Finally, set the interval timer to increment the bound data value every second." textWrap="true" cssClass="text" />
+			
+			<!-- code snippet - js interval -->
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="source.set(&quot;textSource&quot;, 0);" />
+					<Label text=" " />
+					<Label text="setInterval(function() {" />
+					<Label text="  source.set(&quot;textSource&quot;, source.get(&quot;textSource&quot;) + 1);" />
+					<Label text="}, 1000);" />
+				</StackLayout>
+			</GridLayout>
+			<Label text=" " textWrap="true" />
+
+			<Label text="Special Note" textWrap="true" cssClass="subTitle" />
+
+			<Label text="The target property of a one-way binding is intended to be read-only and should not be modified." textWrap="true" cssClass="text" />
+			<Label text="When the target property of a one-way binding is changed, the data binding will break. To see this in action, change the value of the auto-incrementing TextField above." textWrap="true" cssClass="text" />
+			<Label text=" " textWrap="true" />
+
+		</StackLayout>
+	</ScrollView>
+</Page>
