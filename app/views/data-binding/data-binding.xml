@@ -1,4 +1,4 @@
-<Page loaded="onLoaded">
+<Page loaded="onLoaded" xmlns="http://schemas.nativescript.org/tns.xsd">
 	<ScrollView>
 		<StackLayout>
 			<Label text="Data Binding" class="title" />
@@ -8,11 +8,14 @@
 
 			<Label text="Data Flow" class="subTitle" />
 			<Label text="When data bound, business logic objects are typicaly referred to as the source, and UI elements are considered the target or destination." textWrap="true" cssClass="text" />
-			<Label text="Flow of data between a source and target can be one-way or two-way. In one-way data binding, data flows in a single direction (from source to target, where updates to the source are reflected in the target, but target updates do not flow to the source). In two-way, data flows in both bi-directionally, and both source and target are automatically kept in sync." textWrap="true" cssClass="text" />
+			<Label text="Flow of data between a source and target can be one-way or two-way. In one-way data binding, data flows in a single direction (from source to target, where updates to the source are reflected in the target, but target updates do not flow to the source). In two-way, data flows bi-directionally, and both source and target are automatically kept in sync." textWrap="true" cssClass="text" />
 			<Label text="NativeScript supports both one-way and two-way data binding." textWrap="true" cssClass="text" />
 			<Label text="" textWrap="true" cssClass="text" />
 
 			<Button text="See One-Way Example" tap="seeOneWayExample" />
+			<Label text="" textWrap="true" cssClass="text" />
+
+			<Button text="See Two-Way Example" tap="seeTwoWayExample" />
 			<Label text="" textWrap="true" cssClass="text" />
 
 		</StackLayout>

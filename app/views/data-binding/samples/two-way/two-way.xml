@@ -1,0 +1,7 @@
+<Page loaded="onLoaded" xmlns="http://schemas.nativescript.org/tns.xsd">
+	<ScrollView>
+		<StackLayout>
+			<Label text="Two-Way Data Binding" class="title" />
+		</StackLayout>
+	</ScrollView>
+</Page>
