@@ -2,10 +2,10 @@
   "nativescript": {
     "id": "com.brosteins.LearnNativeScript",
     "tns-ios": {
-      "version": "1.4.1"
+      "version": "1.5.0"
     }
   },
   "dependencies": {
-    "tns-core-modules": "^1.4.0"
+    "tns-core-modules": "^1.5.0"
   }
 }
