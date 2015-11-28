@@ -2,7 +2,7 @@
 	"name": "learn-nativescript",
 	"main": "app.js",
 	"jsoptions": "--expose_gc",
-	"version": "1.4.0",
+	"version": "1.5.0",
 	"author": "Mike Branstein <mike@brosteins.com> (https://brosteins.com)",
 	"description": "Nativescript app showing how to use the platform",
 	"license": "MIT",
