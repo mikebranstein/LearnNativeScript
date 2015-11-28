@@ -2,6 +2,82 @@
 	<ScrollView>
 		<StackLayout>
 			<Label text="Two-Way Data Binding" class="title" />
+			
+			<Label text="With two-way data binding, data flows bi-directionally. Changes in the source business object are synchronized to the target, and changes to the target are synchronized to the source business object." textWrap="true" cssClass="text" />
+			
+			<Label text="Enter a value into the text field, then press to &quot;Show Data Bound Value&quot; button to display the source busniess object's value (which is the same because of the two-way data binding)." textWrap="true" cssClass="text" />
+			<Label text="" textWrap="true" cssClass="text" />
+			
+			<!-- one-way display on page -->
+			<GridLayout columns="auto,*" rows="auto">
+				<Label text="Enter value: " row="0" col="0" />
+				<TextField id="text-field" row="0" col="1" />
+			</GridLayout>
+
+			<Button text="Show Data Bound Value" tap="showDataBoundValue" />
+			<Button text="Reset Data Bound Value" tap="resetDataBoundValue" />
+			<Label text=" " textWrap="true" />
+
+			<Label text="Sample Code" class="subTitle" />
+
+			<Label text="Initializing two-way data bidning is similar to one-way, except you set the twoWay property of your binding options object to true." textWrap="true" cssClass="text" />
+
+			<!-- code snippet - view -->
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="&lt;TextField id=&quot;text-field&quot; /&gt;" />
+				</StackLayout>
+			</GridLayout>
+			<Label text=" " textWrap="true" cssClass="text" />
+			
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="var observableModule = require(&quot;data/observable&quot;);" textWrap="true" />
+					<Label text="var source = new observableModule.Observable({" textWrap="true" />
+					<Label text="  textSource: 0" />
+					<Label text="});" />
+					<Label text=" " />
+					<Label text="exports.onLoaded = function (args) {" textWrap="true" />
+					<Label text="  var page = args.object;" textWrap="true" />
+					<Label text="  var textField = page.getViewById(&quot;text-field&quot;);" textWrap="true" />
+					<Label text="  var bindingOptions = {" />
+					<Label text="    sourceProperty: &quot;textSource&quot;," textWrap="true" />
+					<Label text="    targetProperty: &quot;text&quot;," textWrap="true" />
+					<Label text="    twoWay: true" />
+					<Label text="  }" />
+					<Label text="  textField.bind(bindingOptions, source);" textWrap="true" />
+					<Label text="}" />
+				</StackLayout>
+			</GridLayout>
+			<Label text=" " textWrap="true" cssClass="text" />
+
+			<!-- show data bound value sample code -->
+			<Label text="When you click the &quot;Show Data Bound Value&quot; button, an alert dialog displays the synchronized value from the observable source object. This demonstrates target-to-source binding - changes to the target are reflected in the source object." textWrap="true" cssClass="text" />
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="var dialogsModule = require(&quot;ui/dialogs&quot;);" textWrap="true" />
+					<Label text="dialogsModule.alert(&quot;Data bound value is '&quot; + source.get(&quot;textSource&quot;) + &quot;'&quot;);" textWrap="true" />
+				</StackLayout>
+			</GridLayout>
+			<Label text=" " textWrap="true" cssClass="text" />
+			
+			<!-- show data bound value sample code -->
+			<Label text="When you click the &quot;Reset Data Bound Value&quot; button, the source object's value is reset to an empty value. This in turn updates the text field value. This demonstrates source-to-target binding - changes to the source object are reflected in the target." textWrap="true" cssClass="text" />
+			<GridLayout columns="10,*" rows="auto">
+				<StackLayout cssClass="codeSidebar">
+				</StackLayout>
+				<StackLayout col="1" cssClass="code">
+					<Label text="source.set(&quot;textSource&quot;, &quot;&quot;);" textWrap="true" />
+				</StackLayout>
+			</GridLayout>
+			<Label text=" " textWrap="true" cssClass="text" />
+
 		</StackLayout>
 	</ScrollView>
 </Page>
