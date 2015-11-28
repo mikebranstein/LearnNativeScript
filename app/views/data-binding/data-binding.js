@@ -10,8 +10,8 @@ exports.onLoaded = function (args) {
 
 exports.seeOneWayExample = function (args) {
 	topmost.navigate(viewRoot + "one-way/one-way");
-}
+};
 
 exports.seeTwoWayExample = function (args) {
 	topmost.navigate(viewRoot + "two-way/two-way");
-}
+};
